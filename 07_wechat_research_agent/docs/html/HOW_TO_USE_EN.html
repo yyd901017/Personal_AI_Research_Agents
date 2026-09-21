@@ -1,0 +1,24 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><title>WeChat Research Agent How To Use</title><style>
+body{font-family:"Segoe UI",Arial,"Microsoft YaHei",sans-serif;line-height:1.65;margin:0;background:#f7f8fa;color:#1f2937}.page{max-width:980px;margin:0 auto;padding:36px 28px;background:#fff;min-height:100vh}h1{font-size:34px;margin:0 0 8px}h2{border-top:1px solid #e5e7eb;padding-top:22px;margin-top:32px}h3{margin-top:24px}.meta{color:#4b5563;margin-bottom:22px}.note{background:#eef6ff;border-left:4px solid #2563eb;padding:12px 14px;margin:18px 0}.warn{background:#fff7ed;border-left:4px solid #f97316;padding:12px 14px;margin:18px 0}code{background:#f3f4f6;padding:2px 5px;border-radius:4px}pre{background:#111827;color:#e5e7eb;padding:14px 16px;border-radius:8px;overflow:auto}img{max-width:100%;border:1px solid #e5e7eb;border-radius:8px;margin:14px 0 8px}.caption{font-size:14px;color:#6b7280;text-align:center;margin-bottom:18px}table{border-collapse:collapse;width:100%;margin:16px 0}th,td{border:1px solid #e5e7eb;padding:8px;text-align:left}th{background:#f3f4f6}a{color:#2563eb;text-decoration:none}a:hover{text-decoration:underline}.toc{background:#f9fafb;border:1px solid #e5e7eb;border-radius:8px;padding:14px 18px}.toc li{margin:4px 0}
+</style></head><body><main class="page">
+<h1>Personal AI Research Agents WeChat Research Agent</h1>
+<p class="meta">Author: Steven Yuandong Yue<br>Title: AI Research Tool Builder</p>
+<div class="note">A standalone Streamlit agent for finding and extracting research leads from WeChat public-account articles.</div>
+<h2>1. Difference From Literature Agent</h2>
+<ul><li><code>06_web_literature_agent</code>: searches scholarly metadata APIs such as Crossref, arXiv, OpenAlex, and Semantic Scholar.</li><li><code>07_wechat_research_agent</code>: focuses on WeChat public-account articles as research leads.</li></ul>
+<h2>2. Features</h2>
+<ul><li>Generate external WeChat article search links.</li><li>Search launcher includes Sogou WeChat, Bing site search, and Google site search.</li><li>Parse WeChat article URL when accessible.</li><li>Accept pasted WeChat article text when URL access is restricted.</li><li>Extract DOI candidates and title candidates.</li><li>Verify candidates through Crossref.</li><li>Export extracted clues to Excel.</li></ul>
+<h2>3. Quick Start</h2>
+<pre>cd "D:\Projects_New Energy\Personal_AI_Research_Agents\07_wechat_research_agent"
+python -m venv .venv
+.\.venv\Scripts\Activate.ps1
+pip install -r requirements.txt
+streamlit run app.py --server.port 8502</pre>
+<p>Or run:</p><pre>D:\Projects_New Energy\Personal_AI_Research_Agents\07_wechat_research_agent\start_wechat_research_agent.bat</pre>
+<p>Open:</p><pre>http://localhost:8502</pre>
+<h2>4. Notes</h2>
+<p>The ChatGPT-on-WeChat / WordPress article describes a different future direction: connecting an official WeChat public account to an AI bot service. That would require WeChat public-account admin credentials, server configuration, token/aes key setup, HTTPS, and API key security.</p>
+<p>This first version is safer and simpler: it helps users search public WeChat article pages and extract paper clues manually or semi-automatically.</p>
+</main></body></html>
+
+

@@ -1,0 +1,33 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><title>WeChat Research Agent 中文使用说明</title><style>
+body{font-family:"Segoe UI",Arial,"Microsoft YaHei",sans-serif;line-height:1.65;margin:0;background:#f7f8fa;color:#1f2937}.page{max-width:980px;margin:0 auto;padding:36px 28px;background:#fff;min-height:100vh}h1{font-size:34px;margin:0 0 8px}h2{border-top:1px solid #e5e7eb;padding-top:22px;margin-top:32px}h3{margin-top:24px}.meta{color:#4b5563;margin-bottom:22px}.note{background:#eef6ff;border-left:4px solid #2563eb;padding:12px 14px;margin:18px 0}.warn{background:#fff7ed;border-left:4px solid #f97316;padding:12px 14px;margin:18px 0}code{background:#f3f4f6;padding:2px 5px;border-radius:4px}pre{background:#111827;color:#e5e7eb;padding:14px 16px;border-radius:8px;overflow:auto}img{max-width:100%;border:1px solid #e5e7eb;border-radius:8px;margin:14px 0 8px}.caption{font-size:14px;color:#6b7280;text-align:center;margin-bottom:18px}table{border-collapse:collapse;width:100%;margin:16px 0}th,td{border:1px solid #e5e7eb;padding:8px;text-align:left}th{background:#f3f4f6}a{color:#2563eb;text-decoration:none}a:hover{text-decoration:underline}.toc{background:#f9fafb;border:1px solid #e5e7eb;border-radius:8px;padding:14px 18px}.toc li{margin:4px 0}
+</style></head><body><main class="page">
+<h1>Personal AI Research Agents 微信公众号科研线索 Agent 使用说明</h1>
+<p class="meta">作者：Steven Yuandong Yue<br>Title：AI Research Tool Builder</p>
+<div class="note">这个 Agent 独立于 <code>06_web_literature_agent</code>，专门从微信公众号文章中发现科研论文线索。</div>
+<h2>1. 这个 Agent 是什么</h2>
+<p>它不是正式论文数据库搜索工具，而是帮助你从公众号文章里提取 DOI、论文标题、期刊等线索，再用 Crossref 验证正式论文。</p>
+<pre>公众号文章搜索入口
+        ↓
+找到公众号文章
+        ↓
+粘贴文章链接或正文
+        ↓
+提取 DOI / 论文标题线索
+        ↓
+用 Crossref 验证正式论文
+        ↓
+导出 Excel</pre>
+<h2>2. 如何启动</h2>
+<pre>D:\Projects_New Energy\Personal_AI_Research_Agents\07_wechat_research_agent\start_wechat_research_agent.bat</pre>
+<p>然后打开：</p><pre>http://localhost:8502</pre>
+<h2>3. 怎么用</h2>
+<ol><li>输入搜索关键词，例如 <code>PEM catalyst HEO</code>、<code>高熵氧化物 催化剂</code>。</li><li>点击生成的 <strong>Open Search</strong> 外部搜索入口。</li><li>找到公众号文章后复制链接。</li><li>把链接粘贴到 <strong>公众号文章链接</strong>。</li><li>如果链接读取失败，把正文粘贴到 <strong>公众号文章正文</strong>。</li><li>点击 <strong>提取论文线索</strong>。</li><li>查看 DOI candidate、Title candidate、Crossref verified paper。</li><li>下载 Excel。</li></ol>
+<h2>4. 当前限制</h2>
+<ul><li>不直接批量爬微信公众号。</li><li>不读取个人微信聊天记录。</li><li>不破解微信本地数据库。</li><li>微信链接可能无法自动读取，正文粘贴更稳定。</li><li>公众号文章只是科研线索来源，不是正式论文数据库。</li><li>Crossref 验证结果需要人工复核。</li><li>还没有和 <code>06_web_literature_agent</code> 自动合并。</li></ul>
+<h2>5. 和 ChatGPT-on-WeChat 的关系</h2>
+<p>你提供的文章讲的是公众号后台接入 AI bot，这需要公众号管理员权限、AppID、AppSecret、Token、EncodingAESKey、服务器、域名和 HTTPS。当前第一版先做更轻量安全的公众号搜索入口和论文线索提取。</p>
+<h2>6. 下一版建议</h2>
+<ul><li>一键把验证后的论文加入 Literature Agent。</li><li>保存公众号文章解析历史。</li><li>Qwen Plus 总结公众号文章。</li><li>人工反馈标签：Relevant / Not Relevant / Priority。</li><li>同步到 Personal AI Research Agents 数据平台 Excel。</li></ul>
+</main></body></html>
+
+

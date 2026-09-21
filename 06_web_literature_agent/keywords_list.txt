@@ -1,0 +1,22 @@
+Default keywords:
+PEM catalyst HEO
+
+Recommended keyword groups:
+- PEM catalyst HEO
+- PEM fuel cell catalyst
+- PEM water electrolysis catalyst
+- HEO catalyst hydrogen evolution reaction
+- HEA catalyst hydrogen evolution reaction
+- HER catalyst
+- OER catalyst
+- high entropy oxide catalyst
+- high entropy alloy catalyst
+
+Abbreviations:
+- PEM = Proton Exchange Membrane
+- HEO = High-Entropy Oxide
+- HEA = High-Entropy Alloy
+- HER = Hydrogen Evolution Reaction
+- OER = Oxygen Evolution Reaction
+
+

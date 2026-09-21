@@ -1,0 +1,3 @@
+"""WeChat research assistant package."""
+
+

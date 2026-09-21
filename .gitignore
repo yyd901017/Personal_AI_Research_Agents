@@ -1,0 +1,36 @@
+# Dependencies / local runtime links
+node_modules/
+
+# Office temporary lock files
+~$*
+
+# Generated extraction cache and deprecated build artifacts
+pdf_literature_extract.json
+build_cosmic_energy_data_platform_v01.mjs
+Cosmic Energy 数据平台 v0.1.xlsx
+Cosmic Energy 数据平台 v0.2_文献库已整理.xlsx
+
+# Sensitive or copyrighted source materials.
+# Upload only after confidentiality/IP/copyright review.
+*.pdf
+*.docx
+*.doc
+image001.png
+
+# OS/editor noise
+.DS_Store
+Thumbs.db
+desktop.ini
+.idea/
+.vscode/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Local environment files
+.env
+.env.*
+
+# Local Codex project memory
+.codex/
