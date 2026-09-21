@@ -50,13 +50,13 @@ st.title("文献检索 Agent")
 st.caption("Network Literature Search Assistant | 网络文献检索助手")
 st.markdown("**Author / 作者:** Steven Yuandong Yue  |  **Title:** AI Research Tool Builder")
 
-DEFAULT_KEYWORDS = "PEM catalyst HEO"
+DEFAULT_KEYWORDS = ""
 DEFAULT_SOURCES = ["OpenAlex", "Crossref", "arXiv"]
 DEFAULT_SUMMARY_GOAL = "筛选对氢能源材料、AI 数据提取和催化剂发现最有价值的论文。"
 SUMMARY_QUICK_GOALS = [
     "总结这些论文中最值得优先阅读的 5 篇，并说明原因。",
     "筛选对氢能源材料、AI 数据提取和催化剂发现最有价值的论文。",
-    "总结这些论文和 PEM catalyst / HEO / 氢能源催化剂的关系。",
+    "总结这些论文和当前关键词主题的关系。",
     "按研究方向把这些论文分类，并指出每类代表论文。",
     "提取这些论文中可能有用的数据字段，例如材料体系、催化剂、性能指标、实验条件。",
     "从商业研发角度判断哪些论文最适合 Personal AI Research Agents 后续跟进。",
@@ -342,7 +342,7 @@ if papers:
         "快速问题 / Quick question",
         [
             "这篇论文主要研究什么？",
-            "这篇论文和 PEM catalyst / HEO 有什么关系？",
+            "这篇论文和当前检索主题有什么关系？",
             "这篇论文有哪些可提取的数据字段？",
             "这篇论文是否值得优先阅读？为什么？",
         ],
@@ -390,6 +390,8 @@ if papers:
     )
 else:
     st.info("请输入检索条件，然后点击开始检索 / Enter search conditions and click Search literature.")
+
+
 
 
 
